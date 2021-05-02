@@ -3,7 +3,7 @@ var WebSocketServer = WebSocket.Server;
 
 const express = require('express');
 const app = express();
-const PORT =process.env.PORT || 8181;
+const port =process.env.PORT || 8181;
 var path = require('path');
 app.use(express.static('./'));
 
@@ -20,11 +20,11 @@ app.use(express.static('./'));
 //   });
 // });
 
- app.listen( PORT, () => console.log(`Server listening on port: ${PORT}`));
+ //app.listen( port, () => console.log(`Server listening on port: ${port}`));
 
 
 
-wss = new WebSocketServer({ port: PORT });
+wss = new WebSocketServer({ port: port });
 var uuid = require('node-uuid');
 
 var clients = [];
