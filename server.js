@@ -10,21 +10,21 @@ app.use(express.static('./'));
 app.get('/', (req, res) => {
   var options = {
     root: path.join(__dirname)
-};
+  };
   res.sendFile("client.html", options, function (err) {
     if (err) {
-        next(err);
+      next(err);
     } else {
-        console.log('Sent:', "client.html");
+      console.log('Sent:', "client.html");
     }
+  });
 });
-});
 
-app.listen( process.env.PORT||PORT, () => console.log(`Server listening on port: ${PORT}`));
-
+app.listen(process.env.PORT || PORT, () => console.log(`Server listening on port: ${PORT}`));
 
 
-  wss = new WebSocketServer({ port: 8181 });
+
+wss = new WebSocketServer({ port: 8181 });
 var uuid = require('node-uuid');
 
 var clients = [];
