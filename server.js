@@ -20,7 +20,7 @@ app.use(express.static('./'));
 //   });
 // });
 
-// app.listen(process.env.PORT || PORT, () => console.log(`Server listening on port: ${PORT}`));
+ app.listen(process.env.PORT || PORT, () => console.log(`Server listening on port: ${PORT}`));
 
 
 
