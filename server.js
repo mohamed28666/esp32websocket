@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 });
 
-app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+app.listen( process.env.PORT||PORT, () => console.log(`Server listening on port: ${PORT}`));
 
 
 
