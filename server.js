@@ -7,20 +7,20 @@ const PORT = 3000;
 var path = require('path');
 app.use(express.static('./'));
 
-app.get('/', (req, res) => {
-  var options = {
-    root: path.join(__dirname)
-  };
-  res.sendFile("client.html", options, function (err) {
-    if (err) {
-      next(err);
-    } else {
-      console.log('Sent:', "client.html");
-    }
-  });
-});
+// app.get('/', (req, res) => {
+//   var options = {
+//     root: path.join(__dirname)
+//   };
+//   res.sendFile("client.html", options, function (err) {
+//     if (err) {
+//       next(err);
+//     } else {
+//       console.log('Sent:', "client.html");
+//     }
+//   });
+// });
 
-app.listen(process.env.PORT || PORT, () => console.log(`Server listening on port: ${PORT}`));
+// app.listen(process.env.PORT || PORT, () => console.log(`Server listening on port: ${PORT}`));
 
 
 
